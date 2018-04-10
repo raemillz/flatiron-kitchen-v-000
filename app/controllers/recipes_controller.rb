@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-before_action :set_recipe, only: [:edit, :update]
+before_action :set_recipe, only: [:edit, :update, :show]
 before_action :get_ingredients, only: [:new, :edit]
 
   def index
@@ -29,6 +29,8 @@ before_action :get_ingredients, only: [:new, :edit]
     else
       render 'edit'
     end
+  end
+  def show
   end
 
 private
