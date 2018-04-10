@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
 before_action :set_recipe, only: [:edit, :update]
+before_action :get_ingredients, only: [:new, :edit]
 
   def edit
   end
