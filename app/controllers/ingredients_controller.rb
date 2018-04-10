@@ -18,7 +18,12 @@ class IngredientsController < ApplicationController
   end
 
   def update
-
+    @ingredient = Ingredient.new(ingredient_params)
+    if @ingredient.update
+      redirect_to @ingredient
+    else
+      render 'new'
+    end
   end
 
   def show
