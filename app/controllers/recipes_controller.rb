@@ -2,11 +2,10 @@ class RecipesController < ApplicationController
 before_action :set_recipe, only: [:edit, :update]
 
   def edit
-
   end
 
   def new
-
+    @recipe = Recipe.new
   end
 
 private
