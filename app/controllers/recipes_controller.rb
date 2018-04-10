@@ -13,7 +13,7 @@ before_action :get_ingredients, only: [:new, :edit]
   def create
     @recipe = Recipe.new
     if @recipe.save
-      redirect_to @recipe
+      redirect_to recipes_path
     else
       render 'new'
     end
@@ -27,7 +27,7 @@ before_action :get_ingredients, only: [:new, :edit]
     if @recipe.save
       redirect_to @recipe
     else
-      render 'edit'  
+      render 'edit'
     end
   end
 
