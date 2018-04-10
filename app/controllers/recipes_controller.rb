@@ -17,10 +17,14 @@ before_action :set_recipe, only: [:edit, :update]
     end
   end
 
+  def show
+
+  end
+
 private
 
   def recipe_params
-    params.require(:recipe).permit(:name)
+    params.require(:recipe).permit(:name, :ingredient_ids[])
   end
 
   def set_recipe
