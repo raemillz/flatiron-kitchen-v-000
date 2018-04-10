@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
 before_action :set_recipe, only: [:edit, :update]
-#before_action :get_ingredients, only: [:new, :edit]
+before_action :get_ingredients, only: [:new, :edit]
 
   def new
     @recipe = Recipe.new
@@ -28,8 +28,8 @@ private
     @recipe = Recipe.find(params[id])
   end
 
-#  def get_ingredients
-#    @ingredients = Ingredient.all
-#  end
+  def get_ingredients
+    @ingredients = Ingredient.all
+  end
 
 end
