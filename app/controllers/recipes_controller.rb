@@ -32,4 +32,8 @@ private
     @recipe = Recipe.find(params[id])
   end
 
+  def get_ingredients
+    @ingredients = Ingredient.all
+  end
+
 end
