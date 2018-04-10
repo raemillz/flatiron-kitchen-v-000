@@ -17,10 +17,6 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.find(params[:id])
   end
 
-  def update
-
-  end
-
   def show
     @ingredient = Ingredient.find(params[:id])
   end
