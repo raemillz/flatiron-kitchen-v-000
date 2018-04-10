@@ -22,7 +22,7 @@ class IngredientsController < ApplicationController
     if @ingredient.update
       redirect_to @ingredient
     else
-      render 'new'
+      render 'edit'
     end
   end
 
