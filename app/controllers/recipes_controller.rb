@@ -2,6 +2,10 @@ class RecipesController < ApplicationController
 before_action :set_recipe, only: [:edit, :update]
 before_action :get_ingredients, only: [:new, :edit]
 
+  def index
+    @recipes = Recipe.ll
+  end
+
   def new
     @recipe = Recipe.new
   end
