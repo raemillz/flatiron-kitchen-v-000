@@ -14,4 +14,8 @@ private
     params.require(:recipe).permit(:name)
   end
 
+  def set_recipe
+    @recipe = Recipe.find(params[id])
+  end
+
 end
