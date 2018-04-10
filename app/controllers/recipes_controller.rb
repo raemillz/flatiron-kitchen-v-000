@@ -2,9 +2,6 @@ class RecipesController < ApplicationController
 before_action :set_recipe, only: [:edit, :update]
 before_action :get_ingredients, only: [:new, :edit]
 
-  def edit
-  end
-
   def new
     @recipe = Recipe.new
   end
@@ -18,8 +15,7 @@ before_action :get_ingredients, only: [:new, :edit]
     end
   end
 
-  def show
-
+  def edit
   end
 
 private
