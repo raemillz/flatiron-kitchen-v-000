@@ -24,7 +24,7 @@ before_action :set_recipe, only: [:edit, :update]
 private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :ingredient_ids[])
+    params.require(:recipe).permit(:name, ingredient_ids: [])
   end
 
   def set_recipe
