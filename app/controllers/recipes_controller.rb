@@ -22,6 +22,15 @@ before_action :get_ingredients, only: [:new, :edit]
   def edit
   end
 
+  def update
+    @recipe.update(recipe_params)
+    if @recipe.save
+      redirect_to @recipe
+    else
+      render 'edit'  
+    end
+  end
+
 private
 
   def recipe_params
