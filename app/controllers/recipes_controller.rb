@@ -8,6 +8,15 @@ before_action :set_recipe, only: [:edit, :update]
     @recipe = Recipe.new
   end
 
+  def create
+    @recipe = Recipe.new
+    if @recipe.save
+      redirect_to @recipe
+    else
+      render 'new'
+    end
+  end
+
 private
 
   def recipe_params
