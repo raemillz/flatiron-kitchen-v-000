@@ -24,9 +24,9 @@ class IngredientsController < ApplicationController
   def update
     @ingredient.update(ingredient_params)
     if @ingredient.save
-      redirect_to ingredients_path
+      redirect_to @ingredient
     else
-      render :edit
+      render 'edit'
     end
   end
 
