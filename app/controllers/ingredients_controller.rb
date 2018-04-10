@@ -1,5 +1,5 @@
 class IngredientsController < ApplicationController
-  before_action :set_ingredient, only: [:edit, :update]
+  before_action :set_ingredient, only: [:edit, :update, :show]
 
   def index
     @ingredients = Ingredient.all
